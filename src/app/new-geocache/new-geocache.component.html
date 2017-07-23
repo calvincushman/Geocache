@@ -1,3 +1,7 @@
-<p>
-  new-geocache works!
-</p>
+<h1>New GeoCache</h1>
+<div>
+  <h3>Latitude: {{childLocation.results["0"].geometry.bounds.northeast.lat}}</h3>
+  <h3>Longitude: {{childLocation.results["0"].geometry.bounds.northeast.lng}}</h3>
+  <h3>Address:</h3>
+  <h4>{{childLocation.results["0"].formatted_address}}</h4>
+</div>
