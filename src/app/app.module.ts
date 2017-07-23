@@ -6,11 +6,13 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { NewGeocacheComponent } from './new-geocache/new-geocache.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserFormComponent
+    UserFormComponent,
+    NewGeocacheComponent
   ],
   imports: [
     BrowserModule,

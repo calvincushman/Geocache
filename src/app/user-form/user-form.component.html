@@ -15,13 +15,26 @@
   <li>
     <input #newLng>
   </li>
+  <button (click)="getPhysicalAddress(newLat.value, newLng.value)"> Add Coordinates </button>
   <h3>or</h3>
   <h3>Enter an Address</h3>
+  <li>
+    <label for="house">House Number</label>
+  </li>
+  <li>
+    <input #newHouse>
+  </li>
   <li>
     <label for="street">Street Address</label>
   </li>
   <li>
     <input #newStreet>
+  </li>
+  <li>
+    <label for="street-type">Street Type</label>
+  </li>
+  <li>
+    <input #newStreetType>
   </li>
   <li>
     <label for="city">City</label>
@@ -68,7 +81,7 @@
       <option value="ND">North Dakota</option>
       <option value="OH">Ohio</option>
       <option value="OK">Oklahoma</option>
-      <option value="OR">Oregon</option>
+      <option value="OR">OR</option>
       <option value="PA">Pennsylvania</option>
       <option value="RI">Rhode Island</option>
       <option value="SC">South Carolina</option>
@@ -83,4 +96,10 @@
       <option value="WI">Wisconsin</option>
       <option value="WY">Wyoming</option>
   </select>
+  <li>
+    <button (click)="getLatAndLng(newHouse.value, newStreet.value, newStreetType.value, newCity.value, newState.value)"> Add Address </button>
+  </li>
 </form>
+<div *ngIf="locations">
+  <app-new-geocache [childLocations]="locations"></app-new-geocache>
+</div>
